@@ -3,13 +3,13 @@
 const drivers = ['Antonia', 'Nuru', 'Amari', 'Mo']
 
 
-const returnFirstTwoDrivers = () => {
+const returnFirstTwoDrivers =function(){
     return drivers.slice(0, 2)
 }
 
 
 // returnLastTwoDrivers
-const returnLastTwoDrivers = () => {
+const returnLastTwoDrivers = function(){
     return drivers.slice(2, 4)
 }
 
@@ -19,8 +19,8 @@ const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers]
 
 
 // createFareMultiplier
-const createFareMultiplier = (integerArgument) => {
-    return (fare) => {
+const createFareMultiplier = function(integerArgument){
+    return (fare)=>{
         return fare * integerArgument;
     }
 }
@@ -35,6 +35,6 @@ const fareTripler = createFareMultiplier(3);
 
 
 // selectDifferentDrivers
-const selectDifferentDrivers = (drivers, eitherDriversArray) => {
+const selectDifferentDrivers = function(drivers, eitherDriversArray){
     return eitherDriversArray(drivers);
 }
