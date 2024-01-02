@@ -1,40 +1,15 @@
-// Code your solution in this file!
-// returnFirstTwoDrivers
-const drivers = ['Antonia', 'Nuru', 'Amari', 'Mo']
+const drivers = ['Antonia', 'Nuru', 'Amari', 'Mo'];
 
+const returnFirstTwoDrivers=()=>drivers.slice(0,2);
 
-const returnFirstTwoDrivers =function(){
-    return drivers.slice(0, 2)
-}
+const returnLastTwoDrivers=()=>drivers.slice(2,4);
 
+const selectingDrivers=[returnFirstTwoDrivers,returnLastTwoDrivers]
 
-// returnLastTwoDrivers
-const returnLastTwoDrivers = function(){
-    return drivers.slice(2, 4)
-}
+const createFareMultiplier=(multiplier)=>((fare)=>fare*multiplier)
 
+const fareDoubler=createFareMultiplier(2);
 
-// selectingDrivers
-const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers]
+const fareTripler=createFareMultiplier(3);
 
-
-// createFareMultiplier
-const createFareMultiplier = function(integerArgument){
-    return (fare)=>{
-        return fare * integerArgument;
-    }
-}
-
-
-
-// fareDoubler 
-const fareDoubler = createFareMultiplier(2);
-
-// fareTripler
-const fareTripler = createFareMultiplier(3);
-
-
-// selectDifferentDrivers
-const selectDifferentDrivers = function(drivers, eitherDriversArray){
-    return eitherDriversArray(drivers);
-}
+const selectDifferentDrivers=(drivers, eitherOfDrivers)=>eitherOfDrivers(selectingDrivers);
